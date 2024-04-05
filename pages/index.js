@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Hello NextJS!!!!</h1> 
+        <h1>Hello NextJS!!!!!!!!!!!!!!!!!!!!!!!!!</h1> 
         <Image src='/next.svg' width={200} height={200} alt=''/>
       </main>
     </>
