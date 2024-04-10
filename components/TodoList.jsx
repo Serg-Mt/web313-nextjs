@@ -39,3 +39,45 @@ export function ToDoList() {
     {/* <span>{Date.now()}</span> */}
   </div>
 }
+
+function Form({ newItem }) {
+  const
+    [value, setValue] = useState('_++++_');
+  return <>
+    <input value={value} onChange={evt => setValue(evt.target.value)} />
+    <button onClick={() => newItem(value)}>Add</button>
+  </>;
+}
+
+export function ToDoList1() {
+  const
+    [list, setList] = useState(['item 1', 'item 2']);
+  return <>
+    <Form newItem={val => setList([...list, val])} />
+    <ol>
+      {list.map(el => <li>{el}</li>)}
+    </ol>
+    <hr />
+    <Parent />
+  </>
+}
+
+function Child({ value, setValue }) {
+  return <>
+    value={value}
+    <button onClick={()=>setValue(value-1)}>-1</button>
+    <button onClick={()=>setValue(value+1)}>+1</button>
+    <button onClick={()=>setValue(100)}>100</button>
+    <button onClick={()=>setValue(1000)}>1000</button>
+    <button onClick={()=>setValue(value-10)}>-10</button>
+  </>;
+}
+function Parent() {
+  const
+    [state, setState] = useState('99');
+  return <>
+    <Child value={state} setValue={setState}/>
+    <hr/>
+    <Child value={state} setValue={setState}/>
+  </>;
+}

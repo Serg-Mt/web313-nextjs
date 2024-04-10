@@ -11,6 +11,9 @@ export function Nav() {
       <li>
         <Link href="/users">Users</Link>
       </li>
+      <li>
+        <Link href="todo">To Do List</Link>
+      </li>
     </ul>
   </nav>
 }
