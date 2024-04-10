@@ -9,7 +9,7 @@ export function Nav() {
         <Link href="/">Hime</Link>
       </li>
       <li>
-        <Link href="/about">About</Link>
+        <Link href="/users">Users</Link>
       </li>
     </ul>
   </nav>
