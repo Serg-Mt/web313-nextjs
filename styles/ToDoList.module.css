@@ -1,0 +1,13 @@
+.todolist {
+  color:red;
+}
+
+.todolist ol {
+  color: green;
+}
+
+.todolist button {
+  border: none;
+  background-color: transparent;
+
+}
